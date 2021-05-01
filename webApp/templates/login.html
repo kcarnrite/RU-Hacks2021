@@ -1,16 +1,10 @@
-				<body class="landing is-preload">
-        		<div id="page-wrapper">
-                	<!-- Header -->
-                	<header id="header" class="alt">
-			<h1><span class="image left"><img src={% static 'images/logo_pink_new.png' %} alt="" /></span> Blood Pressure Buddy</h1>
-                </header>
 
 
 				<section id="cta">
 
 					<h2>Sign in to your account</h2>
 
-					<form method="post" action={% url 'login:login_view' %}>
+					<form method="post" action={% url 'login:loginView' %}>
 						{% csrf_token %}
 						<div class="row gtr-50 gtr-uniform">
 
