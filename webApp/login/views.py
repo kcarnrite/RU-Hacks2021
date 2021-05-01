@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 # Create your views here.
 
 def loginView(request):
-    '''
+    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -14,14 +14,13 @@ def loginView(request):
         if user is not None:
             login(request,user)
             request.session['failed'] = False
-            return redirect('home:home_view')
+            return redirect('home:homeView')
         else:
             request.session['failed'] = True
 
 
     failed = request.session.get('failed', False)
-    '''
-    failed = False
+    
     form = AuthenticationForm(request.POST)
     context = { 'login_form' : form,
                 'failed' : failed}
