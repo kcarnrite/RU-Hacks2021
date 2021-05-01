@@ -5,6 +5,9 @@ from django.contrib.auth import authenticate, login
 
 # Create your views here.
 
+def blankView(request):
+    return redirect('login:loginView')
+
 def loginView(request):
     
     if request.method == 'POST':
@@ -14,7 +17,7 @@ def loginView(request):
         if user is not None:
             login(request,user)
             request.session['failed'] = False
-            return redirect('home:homeView')
+            return redirect('courses:homeView')
         else:
             request.session['failed'] = True
 
