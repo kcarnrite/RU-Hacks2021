@@ -1,0 +1,29 @@
+				<body class="landing is-preload">
+        		<div id="page-wrapper">
+                	<!-- Header -->
+                	<header id="header" class="alt">
+			<h1><span class="image left"><img src={% static 'images/logo_pink_new.png' %} alt="" /></span> Blood Pressure Buddy</h1>
+                </header>
+
+
+				<section id="cta">
+
+					<h2>Sign in to your account</h2>
+
+					<form method="post" action={% url 'login:login_view' %}>
+						{% csrf_token %}
+						<div class="row gtr-50 gtr-uniform">
+
+							<div class="col-8 col-12-mobilep">
+								<input type="text" name="username" placeholder="Username" required/>
+							</div>
+							<div class="col-8 col-12-mobilep">
+								<input type="password" name="password" placeholder="Password" required/>
+							</div>
+
+							<div class="col-4 col-12-mobilep">
+								<button type="submit" class="button large">Log In</button>
+							</div>
+						</div>
+					</form>
+				</section>
