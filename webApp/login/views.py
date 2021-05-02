@@ -9,7 +9,6 @@ def blankView(request):
     return redirect('login:loginView')
 
 def loginView(request):
-    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']

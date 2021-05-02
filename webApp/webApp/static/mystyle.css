@@ -1,0 +1,61 @@
+body {
+  background-color: #518FA3;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin: 50px 0;
+  font-family: Rakkas;
+  font-size: 30px;
+  color:#FFFBFB;
+}
+
+.label {
+  margin-top: 40px;
+  position: relative;
+}
+
+.label-text {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 10px);
+  font-family: Rakkas;
+  font-size: 26px;
+  color:#FFFBFB
+}
+
+.input {
+  width: 230px;
+  height: 35px;
+}
+
+.button {
+  background-color:#C4C4C4;
+  margin-top: 40px;
+  height: 60px;
+  width: 150px;
+  font-family: Rakkas;
+  font-size: 20px;
+  color:#FFFBFB;
+  border-radius:15px;
+  border-style: solid;
+  cursor:pointer;
+}
