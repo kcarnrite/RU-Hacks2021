@@ -5,4 +5,5 @@ from django.contrib.auth.models import AbstractUser
 
 class Course(models.Model):
     name = models.TextField()
+    code = models.TextField()
     description = models.TextField()

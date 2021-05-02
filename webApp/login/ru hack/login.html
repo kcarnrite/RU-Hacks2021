@@ -7,21 +7,18 @@
 
 <div class="container">
 <h2 class="header">Welcome back. Sign In</h2>
-<form class="form" method="post" action={% url 'login:loginView' %}>
-	{% csrf_token %}
+  <form class="form">
     <label class="label">
-      <span class="label-text">Username</span>
-      <input type="text" name ="username" class="input" />
+      <span class="label-text">Email</span>
+      <input type="text" class="input" />
     </label>
     <label class="label">
       <span class="label-text">Password</span>
-      <input type="password" name="password" class="input" />
+      <input type="password" class="input" />
     </label>
     <button class="button">Login</button>
   </form>
-  {% if failed == True %}
   <p style="color:#E89595;"> Wrong email or password. Please try again. </p>
-  {% endif %}
 </div>
 
 </body>

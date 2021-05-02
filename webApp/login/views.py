@@ -21,9 +21,7 @@ def loginView(request):
         else:
             request.session['failed'] = True
 
-
     failed = request.session.get('failed', False)
-    
     form = AuthenticationForm(request.POST)
     context = { 'login_form' : form,
                 'failed' : failed}
