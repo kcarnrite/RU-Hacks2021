@@ -1,6 +1,7 @@
 //Scroll back to the top button
 //Get the button:
 mybutton = document.getElementById("myBtn");
+var likes=0;
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -19,13 +20,35 @@ var obj1 = {"video": {
   var obj2 = {"video": {
     "value": "<iframe title='YouTube video player' type=\"text/html\" width='500' height='290' src='https://www.youtube.com/embed/ItZN6o0ylao' frameborder='0' allowFullScreen></iframe>"
   }}
+
+  for (const btn of document.querySelectorAll('.vote')) {
+    btn.addEventListener('click', event => {
+      event.currentTarget.classList.toggle('on');
+      
+    });
+  }
+
+  for (const btn of document.querySelectorAll('.vote')) {
+    btn.addEventListener('click', event => {
+      likes +=1;
+      document.getElementById('numberOfLikes2').innerHTML +=likes;
+      document.getElementById('numberOfLikes').innerHTML +=likes;
+      
+    });
+  }
+
   document.getElementById('obj').innerHTML += obj1.video.value;
   document.getElementById('description').innerHTML += "This is totes helpful!";
   document.getElementById('title').innerHTML +="How to embed videos";
+  
+  document.getElementById('numberOfLikes').innerHTML =likes;
 
   document.getElementById('obj2').innerHTML += obj2.video.value;
   document.getElementById('description2').innerHTML += "This Khan Academy Video Saved My Life No Cap";
   document.getElementById('title2').innerHTML +="HTML for Dummies";
+  
+  document.getElementById('numberOfLikes2').innerHTML =likes;
+  
   
   
   
