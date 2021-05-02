@@ -1,23 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
 
+<div class="container">
+<h2 class="header">Welcome back. Sign In</h2>
+<form class="form" method="post" action={% url 'login:loginView' %}>
+	{% csrf_token %}
+    <label class="label">
+      <span class="label-text">Username</span>
+      <input type="text" name ="username" class="input" />
+    </label>
+    <label class="label">
+      <span class="label-text">Password</span>
+      <input type="password" name="password" class="input" />
+    </label>
+    <button class="button">Login</button>
+  </form>
+  {% if failed == True %}
+  <p style="color:#E89595;"> Wrong email or password. Please try again. </p>
+  {% endif %}
+</div>
 
-				<section id="cta">
-
-					<h2>Sign in to your account</h2>
-
-					<form method="post" action={% url 'login:loginView' %}>
-						{% csrf_token %}
-						<div class="row gtr-50 gtr-uniform">
-
-							<div class="col-8 col-12-mobilep">
-								<input type="text" name="username" placeholder="Username" required/>
-							</div>
-							<div class="col-8 col-12-mobilep">
-								<input type="password" name="password" placeholder="Password" required/>
-							</div>
-
-							<div class="col-4 col-12-mobilep">
-								<button type="submit" class="button large">Log In</button>
-							</div>
-						</div>
-					</form>
-				</section>
+</body>
+</html>
