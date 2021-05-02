@@ -42,6 +42,21 @@ for (const btn of document.querySelectorAll('.vote')) {
 });
 
 
+//Comment
+function showComment(){
+  var commentArea = document.getElementById("comment-area");
+  commentArea.style.display = 'block';
+  // commentArea.classList.remove("hide");
+}
+
+//Reply
+function showReply(){
+  var replyArea = document.getElementById("reply-area");
+  replyArea.style.display = 'block';
+  // replyArea.classList.remove("hide");
+}
+
+
   
     
             
