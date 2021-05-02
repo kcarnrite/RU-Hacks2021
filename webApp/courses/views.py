@@ -14,5 +14,10 @@ def homeView(request):
         return render(request, 'index.html', context)
     return redirect('login:loginView')
 
-def recentActivityView(request):
-    pass
+def courseView(request, Course):
+    user_info = request.user
+    if request.user.is_authenticated:
+        return render(request, 'activityIndex.html')
+
+    return redirect('login:loginView')
+    
