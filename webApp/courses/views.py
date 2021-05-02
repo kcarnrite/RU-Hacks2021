@@ -8,7 +8,9 @@ from . import models
 def homeView(request):
     user_info = request.user
     if request.user.is_authenticated:
-        context = { 'user_info' : user_info}
+        course_info = request.user.courses
+        context = { 'user_info' : user_info,
+                    'course_info' : course_info}
         return render(request, 'index.html', context)
     return redirect('login:loginView')
 

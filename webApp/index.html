@@ -36,15 +36,29 @@
 
         <div class=form-group">
 			<h2>{{ user_info.username }} Class List</h2>
-			{% for course in course_info.all %}
             <div class="container">
             <div class="col-md border rounded border-dark shadow">
                 <h3>CPS510</h3>
-				<h6> {{ course.name }} </h6>
-            	{{ course.description }}            
-			</div>
+                <h6> Database Systems I </h6>
+                Advanced file management techniques involving fundamentals of database organization, 
+                design and management. Emphasis is given to Relational Database Management Systems including relational algebra, normal Forms, 
+                physical Database Structures and their implementation, and Relational Database Languages. Other types of Database Managers are also discussed such as Hierarchical, 
+                Network and Inverted Files.
             </div>
-			{% endfor %}
+            </div>
+            <div class="container">
+                <div class="col-md border rounded border-dark shadow">
+                    <h3>CPS610</h3>
+                    <h6> Database Systems II </h6>
+                    This course is a continuation of CPS510. Topics include: embedded DB languages (e.g. JDBC class libraries) and Embedded SQL, Transaction management, 
+                    Distributed Databases, Transaction Concurrency Control, 
+                    Concurrency Control through Locking/protocol and time stamps, 
+                    Object-Oriented and Object-Relational Database Systems, 
+                    non-structured and NOSQL databases (e.g. Mongo DB). 
+                    Introduction to big data management, Map-Reduce and Hadoop.
+                </div>
+            <div class="container"
+          
             </div>
         </div>
         </div>
