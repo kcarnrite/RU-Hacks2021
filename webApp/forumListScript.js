@@ -33,11 +33,11 @@ var listOfActivities=[];
 
 
 
-addNewActivity("kyle", "question 1","forumPostIndex.html");
-addNewActivity("kyle1","Test Prep?","http://google.ca");
-addNewActivity("kyle2","Exam Details","http://google.ca");
-addNewActivity("kyle0","Review Session","http://google.ca");
-addNewActivity("kyle3","Test Prep","http://google.ca");
+addNewActivity("Kyle", "question 1","forumPostIndex.html");
+addNewActivity("Kyle","Test Prep?","http://google.ca");
+addNewActivity("Kyle","Exam Details","http://google.ca");
+addNewActivity("Kyle","Review Session","http://google.ca");
+addNewActivity("kKyle","Test Prep","http://google.ca");
 
 
 
