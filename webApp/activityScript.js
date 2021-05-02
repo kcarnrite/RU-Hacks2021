@@ -33,9 +33,15 @@ var num = 1
 var id = ""+num;
 
 
+addNewActivity("Jackson", "repli", "question 1","forumPostIndex");
+addNewActivity("Kyle", "post", "question 1","forumPostIndex");
+addNewActivity("Kyle", "post", "Test Prep","http://google.ca");
+addNewActivity("Kyle", "post", "Review Session","http://google.ca");
+addNewActivity("Daphne", "post", "Test Prep","http://google.ca");
+addNewActivity("Vince", "post", "Test Prep","http://google.ca");
+addNewActivity("Vince", "post", "Test Prep","http://google.ca");
+addNewActivity("Kyle", "post", "Test Prep","http://google.ca");
 
-addNewActivity("kyle", "post", "backend","http://google.ca");
-addNewActivity("kyle1", "post", "backend","http://google.ca");
 
 
 
