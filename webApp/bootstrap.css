@@ -10446,4 +10446,14 @@ body{
   min-height: 1px;
   padding: 1rem;
 }
+.comment-area textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin-block: 10px;
+}
+.comment-area input {
+  float: right;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
