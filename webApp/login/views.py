@@ -15,7 +15,7 @@ def loginView(request):
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            login(request,user)
+            login(request, user)
             request.session['failed'] = False
             return redirect('courses:homeView')
         else:
