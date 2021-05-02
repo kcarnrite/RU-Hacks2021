@@ -28,52 +28,55 @@ var postTitle="";
 var link="";
 
 var listOfActivities=[];
-var num = 1
-var id = ""+num;
 
 
-var tree = document.createDocumentFragment();
-          var link = document.createElement("a");
-          link.setAttribute("class", "list-group-item list-group-item-action");
-          link.setAttribute("id", id);
-          link.setAttribute("href", "http://google.com");
-          link.appendChild(document.createTextNode("linkText"));
 
 
-          tree.appendChild(link);
-          document.getElementById("listOfActivity").appendChild(tree);
 
-addNewActivity("kyle", "post", "backend","http://google.ca");
+addNewActivity("kyle", "question 1","forumPostIndex.html");
+addNewActivity("kyle1","Test Prep?","http://google.ca");
+addNewActivity("kyle2","Exam Details","http://google.ca");
+addNewActivity("kyle0","Review Session","http://google.ca");
+addNewActivity("kyle3","Test Prep","http://google.ca");
 
 
 
 
 //Adds the info into arrays corresponding to the user's name, activity type, link to post and the post title
-function activity(userName, activityType,  postTitle, link) {
+function activity(userName, postTitle, link) {
   this.userName = userName;
   this.postTitle = postTitle;
-  this.activityyType= activityType
   this.link = link;
 }
 
-function addNewActivity(userName1, activityType,  postTitle, link,){
+function addNewActivity(userName1, postTitle, link,){
  
-    var a =activity(userName1, activityType,  postTitle, link);
-    listOfActivities.unshift(a);
+    var a =activity(userName1,   postTitle, link);
+    
 
     
     var linkNew =link;
 
-    activityText= userName+" " + activityType +"ed: " + postTitle;
+    activityText= postTitle
 
       var tree = document.createDocumentFragment();
       var link = document.createElement("a");
       link.setAttribute("class", "list-group-item list-group-item-action");
       
       link.setAttribute("href", linkNew);
+      
       link.appendChild(document.createTextNode(activityText));
 
 
+      tree.appendChild(link);
+      document.getElementById("listOfActivity").appendChild(tree);
+
+      var tree = document.createDocumentFragment();
+      var link = document.createElement("p");
+      link.setAttribute("class", "mb-1");
+      
+      
+      link.appendChild(document.createTextNode("Posted By: " + userName));
       tree.appendChild(link);
       document.getElementById("listOfActivity").appendChild(tree);
     };

@@ -33,18 +33,11 @@ var num = 1
 var id = ""+num;
 
 
-var tree = document.createDocumentFragment();
-          var link = document.createElement("a");
-          link.setAttribute("class", "list-group-item list-group-item-action");
-          link.setAttribute("id", id);
-          link.setAttribute("href", "http://google.com");
-          link.appendChild(document.createTextNode("linkText"));
-
-
-          tree.appendChild(link);
-          document.getElementById("listOfActivity").appendChild(tree);
 
 addNewActivity("kyle", "post", "backend","http://google.ca");
+addNewActivity("kyle1", "post", "backend","http://google.ca");
+
+
 
 
 
@@ -57,7 +50,7 @@ function activity(userName, activityType,  postTitle, link) {
   this.link = link;
 }
 
-function addNewActivity(userName1, activityType,  postTitle, link,){
+function addNewActivity(userName1, activityType,  postTitle, link){
  
     var a =activity(userName1, activityType,  postTitle, link);
     listOfActivities.unshift(a);
